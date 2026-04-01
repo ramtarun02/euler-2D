@@ -1,3 +1,4 @@
+#include "types.hpp"
 
 struct caseParameters {
   int numPoints;
@@ -17,10 +18,10 @@ void startSimulation(struct caseParameters, double initialConditions,
 };
 
 int main() {
- caseParameters case;
+  euler2d::caseParameters case;
+  euler2d::InitialCondition initialConditions;
 
- startSimulation(struct caseParameters, double initialConditions, int scheme, int limiter);
-
+ startSimulation(case, initialConditions, euler2d::SCHEME::MUSCLE, euler2d::LIMITER::VANLEER);
  
   
 }
